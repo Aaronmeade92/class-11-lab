@@ -1,7 +1,7 @@
 body{
 
 }
-.first{
+.first-image{
   height: 200px;
   width:;
   display: inline;
@@ -9,14 +9,14 @@ body{
   width: 30%;
 }
 
-.second{
+.second-image{
   height: 200px;
   display: inline;
   margin: auto;
   width: 30%;
 }
 
-.third{
+.third-image{
   height: 200px;
   display: inline;
   margin: auto;
