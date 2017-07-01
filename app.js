@@ -27,7 +27,11 @@ var water = new Image('Water Can', 'https://github.com/codefellows/seattle-201n8
 
 var dog = new Image('Dog', 'https://github.com/codefellows/seattle-201n8/blob/master/class-11-av-practical-clicktracker/assets/dog-duck.jpg?raw=true')
 
-Image.onclick = function(event) {
+function() {
+  
+}
+
+Image.onclick = function {
 
 
 
