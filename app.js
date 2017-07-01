@@ -42,16 +42,13 @@ var imgMaker = function(){for (var i = 0; i < 3; i++) {
   var img = images[num];
   console.log(img);
   imageElements[i].setAttribute('src', img.path)
+    }
   }
+for (var i = 0; i < 26; i++) {
+
+firstImgEl.addEventListener("click", imgMaker);
+
+secondImgEl.addEventListener("click", imgMaker);
+
+thirdImgEl.addEventListener("click", imgMaker);
 }
-firstImgEl.addEventListener("click",function() {alert('work')});
-
-secondImgEl.addEventListener("click",function() {alert('work')});
-
-thirdImgEl.addEventListener("click",function() {alert('work')});
-
-imgMaker();
-
-// if(){
-//
-// }
