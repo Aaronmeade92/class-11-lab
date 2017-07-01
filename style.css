@@ -2,7 +2,7 @@ body{
 
 }
 .first-image{
-  height: 200px;
+  height: 30%;
   width:;
   display: inline;
   margin: auto;
@@ -10,14 +10,14 @@ body{
 }
 
 .second-image{
-  height: 200px;
+  height: 30%;
   display: inline;
   margin: auto;
   width: 30%;
 }
 
 .third-image{
-  height: 200px;
+  height: 30%;
   display: inline;
   margin: auto;
   width: 30%;
