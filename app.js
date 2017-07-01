@@ -35,20 +35,27 @@ function Image(name,path) {
 
   var imageElements = [firstImgEl, secondImgEl, thirdImgEl]
 
-var imgMaker = function(){for (var i = 0; i < 3; i++) {
+var rounds = 0;
+
+var imgMaker = function(event){
+
+  if (rounds < 25) {
+    rounds++;
+    console.log(rounds);
+    event.target.name
+    for (var i = 0; i < 3; i++) {
   images[i]
+
   var num = Math.floor(Math.random() * images.length)
-  console.log(num);
   var img = images[num];
   console.log(img);
-  imageElements[i].setAttribute('src', img.path)
+  imageElements[i].setAttribute('src', img.path);
+  imageElements[i].setAttribute('name', img.name);
     }
   }
-for (var i = 0; i < 26; i++) {
-
+}
 firstImgEl.addEventListener("click", imgMaker);
 
 secondImgEl.addEventListener("click", imgMaker);
 
 thirdImgEl.addEventListener("click", imgMaker);
-}
