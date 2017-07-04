@@ -39,10 +39,15 @@ var rounds = 0;
 
 var imgMaker = function(event){
 
+if (event.target === firstImgEl) {
+  event.clicked++;
+}
   if (rounds < 25) {
     rounds++;
     console.log(rounds);
-    event.target.name
+
+    // var duplicates = event.target.name.value
+
     for (var i = 0; i < 3; i++) {
   images[i]
 
