@@ -1,8 +1,8 @@
 'use strict'
 var images = [];
-var firstImgEl = document.getElementsByClassName('first-image')[0];
-var secondImgEl = document.getElementsByClassName('second-image')[0];
-var thirdImgEl = document.getElementsByClassName('third-image')[0];
+var firstImgEl = document.getElementById('first-image');
+var secondImgEl = document.getElementById('second-image');
+var thirdImgEl = document.getElementById('third-image');
 
 function Image(name,path) {
   this.name = name;
@@ -33,34 +33,52 @@ function Image(name,path) {
   var waterCan = new Image('water-can', './assets/water-can.jpg');
   var wineGlass = new Image('wine-glass', './assets/wine-glass.jpg');
 
+  var imagesArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass]
+
   var imageElements = [firstImgEl, secondImgEl, thirdImgEl]
 
 var rounds = 0;
 
-var imgMaker = function(event){
 
-if (event.target === firstImgEl) {
-  event.clicked++;
+function clickHandler(event){
+  event.preventDefault();
+  console.log(event.target.name);
+
+  for (var i = 0; i < imagesArray.length; i++) {
+    if (event.target.name == imagesArray[i].name ) {
+      imagesArray[i].clicked++;
+    }
+  }
+  imgMaker();
 }
+
+
+var imgMaker = function(){
+
+
   if (rounds < 25) {
     rounds++;
     console.log(rounds);
-
+}
     // var duplicates = event.target.name.value
-
     for (var i = 0; i < 3; i++) {
   images[i]
 
   var num = Math.floor(Math.random() * images.length)
   var img = images[num];
-  console.log(img);
   imageElements[i].setAttribute('src', img.path);
   imageElements[i].setAttribute('name', img.name);
-    }
-  }
+  imagesArray[num].shown++;
+  console.log(img);
 }
-firstImgEl.addEventListener("click", imgMaker);
+}
 
-secondImgEl.addEventListener("click", imgMaker);
 
-thirdImgEl.addEventListener("click", imgMaker);
+
+
+
+firstImgEl.addEventListener("click", clickHandler);
+
+secondImgEl.addEventListener("click", clickHandler);
+
+thirdImgEl.addEventListener("click", clickHandler);
