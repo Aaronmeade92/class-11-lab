@@ -40,6 +40,12 @@ function Image(name,path) {
 var rounds = 0;
 
 
+function storeEverything() {
+  localStorage.clicked = JSON.stringify(imagesArray);
+}
+
+storeEverything();
+
 function clickHandler(event){
   event.preventDefault();
   console.log(event.target.name);
